@@ -1,0 +1,29 @@
+using System;
+namespace Day_3
+{
+	public class Animal
+	{
+		public void Eat()
+		{
+			Console.WriteLine("Dog can Eat");
+		}
+	}
+		public class Dog: Animal
+		{
+			public void Bark()
+			{
+				Console.WriteLine("Dog can Bark");
+			}
+		}
+			public class program
+			{
+				public static void Main()
+				{
+					Dog d=new Dog();
+					d.Eat();
+					d.Bark();
+					
+					Console.ReadLine();
+				}
+			}
+}

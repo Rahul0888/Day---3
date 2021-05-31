@@ -1,0 +1,61 @@
+using System;
+namespace Day_3
+{
+	public class Person
+	{ 
+		public int a;
+		public void Greet()
+		{
+			Console.WriteLine("Hello");
+		}
+		public void SetAge(int age)
+		{
+			a=age;
+		}
+	}
+			
+		public class Student:Person
+		{
+			public void study()
+			{
+				Console.WriteLine("I am Studying");
+			}
+			public void ShowAge()
+			{
+				Console.WriteLine("My age is:" +a);
+			}
+		}
+		public class Teacher:Person
+		{
+			public void Explain()
+			{
+				Console.WriteLine("I am Explaining");
+			}
+		}
+			public class StudentProffessorTest
+			{
+				 public static void Main(string[] args)
+				{
+					Person p=new Person();
+					Teacher T=new Teacher();
+					Student s= new Student();
+					
+					Console.WriteLine("----For Person----");
+					p.Greet();
+					
+					Console.WriteLine("----For student----");
+					int age=Convert.ToInt32(Console.ReadLine());
+					s.SetAge(21);
+					s.ShowAge();
+					
+					Console.WriteLine("----For Teacher----");
+					
+					T.SetAge(25);
+					T.Greet();
+					T.Explain();
+					
+					Console.ReadLine();
+				}
+			}
+		}
+	
